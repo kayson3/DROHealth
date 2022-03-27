@@ -1,17 +1,11 @@
-# drohealth
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 # DROHealth
+
+DRO health home task.
+
+# Notes
+
+The search keywords in the search section of the homepage is case sensitive so i have made the search entered first character to be capitalized
+
+In the categories screen, there are spaces around the images because of the images given or i might as well crop them
+
+And in the product detail screen I have made the quantity increment button not to increase more than 8 because of the UI given for the cart

@@ -1,121 +1,115 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: non_constant_identifier_names
 
 class Product {
   final String? name;
   final String? image;
+  final String? type;
+  final String? weight;
+  final double? price;
+  int cartQuantity;
   final String? description;
-  final int? price;
+  final String? pcksize;
+  final String? productId;
+  final String? dispensedin;
+  final String? constituents;
 
   Product({
     required this.name,
     required this.image,
-    required this.description,
+    required this.type,
     required this.price,
+    required this.weight,
+    required this.cartQuantity,
+    required this.description,
+    required this.pcksize,
+    required this.productId,
+    required this.dispensedin,
+    required this.constituents,
   });
 }
 
 List<Product> CartList = [];
 
-final List<Product> foods = [
+final List<Product> products = [
   Product(
-    name: 'Chicken',
-    image: 'assets/images/Group1153.png',
-    description:
-        'Chicken is a type of bird in the family of gallinaceous birds. It is a domesticated species and is the most widely domesticated bird in the world.',
-    price: 100,
+    name: 'Paracetamol',
+    image: 'assets/images/Rectangle5.png',
+    type: 'Tablet',
+    price: 350.00,
+    weight: '500mg',
+    cartQuantity: 1,
+    description: '1 pack of Paracetamol(500mg) contains 8 units of 12 tablets.',
+    constituents: 'Tablet',
+    dispensedin: 'Packs',
+    pcksize: '8 x 12 tablets(96)',
+    productId: 'PRO23648856',
   ),
   Product(
-    name: 'Fish',
-    image: 'assets/jollofrice.jpg',
-    description:
-        'Fish are a diverse and widespread group of aquatic, gill-bearing aquatic craniate animals. They range in size from very small, such as the carp, to very large, such as the Great White shark.',
-    price: 200,
+    name: 'Doiiprane',
+    image: 'assets/images/Rectangle529.png',
+    type: 'Capsule',
+    price: 350.00,
+    weight: '1000mg',
+    cartQuantity: 1,
+    description: '1 pack of Doiiprane(1000mg) contains 8 units of 12 tablets.',
+    constituents: 'Doiiprane',
+    dispensedin: 'Packs',
+    pcksize: '8 x 10 tablets(96)',
+    productId: 'PRO67648856',
   ),
   Product(
-    name: 'Cake2',
-    image: 'assets/cake2.jpg',
-    description:
-        'Cake is a type of bird in the family of gallinaceous birds. It is a domesticated species and is the most widely domesticated bird in the world.',
-    price: 300,
+    name: 'Paracetamol',
+    image: 'assets/images/Rectangle527.png',
+    type: 'Tablet',
+    price: 350.00,
+    weight: '500mg',
+    cartQuantity: 1,
+    description: '1 pack of Paracetamol(500mg) contains 8 units of 12 tablets.',
+    constituents: 'Paracetamol',
+    dispensedin: 'Packs',
+    pcksize: '5 x 10 tablets(96)',
+    productId: 'PRO2709756',
   ),
   Product(
-    name: 'Chicken',
-    image: 'assets/chicken.jpg',
-    description:
-        'Chicken is a type of bird in the family of gallinaceous birds. It is a domesticated species and is the most widely domesticated bird in the world.',
-    price: 400,
+    name: 'Ibuprofen',
+    image: 'assets/images/Rectangle530.png',
+    type: 'Tablet',
+    price: 350.00,
+    weight: '200mg',
+    cartQuantity: 1,
+    description: '1 pack of Ibruprofen(200mg) contains 8 units of 12 tablets.',
+    constituents: 'Ibuprofen',
+    dispensedin: 'Packs',
+    pcksize: '5 x 10 tablets(66)',
+    productId: 'PRO2336556',
   ),
   Product(
-    name: 'Roll',
-    image: 'assets/roll.jpg',
-    description:
-        'Roll is a type of bird in the family of gallinaceous birds. It is a domesticated species and is the most widely domesticated bird in the world.',
-    price: 500,
+    name: 'Panadol',
+    image: 'assets/images/Rectangle528.png',
+    type: 'Tablet',
+    price: 350.00,
+    weight: '500mg',
+    cartQuantity: 1,
+    description: '1 pack of Panadol(500mg) contains 8 units of 12 tablets.',
+    constituents: 'Panadol',
+    dispensedin: 'Packs',
+    pcksize: '7 x 15 tablets(96)',
+    productId: 'PRO67648856',
   ),
   Product(
-    name: 'Rice',
-    image: 'assets/rice.png',
-    description:
-        'Rice is a type of bird in the family of gallinaceous birds. It is a domesticated species and is the most widely domesticated bird in the world.',
-    price: 600,
-  ),
-  Product(
-    name: 'Snacks',
-    image: 'assets/snacks.jpg',
-    description: 'Sugar is a type',
-    price: 600,
-  ),
-  Product(
-    name: 'Pizza',
-    image: 'assets/pizza.jpeg',
-    description:
-        'pizza are a diverse and widespread group of aquatic, gill-bearing aquatic craniate animals. They range in size from very small, such as the carp, to very large, such as the Great White shark.',
-    price: 700,
-  ),
-  Product(
-    name: 'Fufu',
-    image: 'assets/fufu.jpg',
-    description:
-        'fufu are a diverse and widespread group of aquatic, gill-bearing aquatic craniate animals. They range in size from very small, such as the carp, to very large, such as the Great White shark.',
-    price: 300,
-  ),
-  Product(
-    name: 'Pie',
-    image: 'assets/pie.jpg',
-    description:
-        'pie are a diverse and widespread group of aquatic, gill-bearing aquatic craniate animals. They range in size from very small, such as the carp, to very large, such as the Great White shark.',
-    price: 200,
-  ),
-  Product(
-    name: 'Noodles',
-    image: 'assets/noodles.jpeg',
-    description:
-        'noodles are a diverse and widespread group of aquatic, gill-bearing aquatic craniate animals. They range in size from very small, such as the carp, to very large, such as the Great White shark.',
-    price: 300,
-  ),
-  Product(
-    name: 'Ofada',
-    image: 'assets/ofada.jpg',
-    description:
-        'Ofada are a diverse and widespread group of aquatic, gill-bearing aquatic craniate animals. They range in size from very small, such as the carp, to very large, such as the Great White shark.',
-    price: 200,
-  ),
-  Product(
-    name: 'sandwish',
-    image: 'assets/sandwish.jpg',
-    description:
-        'sandwish are a diverse and widespread group of aquatic, gill-bearing aquatic craniate animals. They range in size from very small, such as the carp, to very large, such as the Great White shark.',
-    price: 200,
+    name: 'Ibuprofen',
+    image: 'assets/images/Rectangle531.png',
+    type: 'tablet',
+    price: 350.00,
+    weight: '400mg',
+    cartQuantity: 1,
+    description: '1 pack of Ibuprofen(400mg) contains 8 units of 12 tablets.',
+    constituents: 'Ibuprofen',
+    dispensedin: 'Packs',
+    pcksize: '7 x 15 tablets(96)',
+    productId: 'PRO12238856',
   ),
 ];
-
-addfood(Product food) {
-  foods.add(food);
-}
-
-removefood(Product food) {
-  foods.remove(food);
-}
 
 /// for adding food to cart
 addtocartlist(Product food) {

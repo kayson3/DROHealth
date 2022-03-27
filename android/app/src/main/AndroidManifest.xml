@@ -3,7 +3,7 @@
    <application
         android:label="DRO Health"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@drawable/ico" >
         <activity
             android:name=".MainActivity"
             android:exported="true"
