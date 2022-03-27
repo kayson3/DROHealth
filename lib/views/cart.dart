@@ -151,9 +151,7 @@ class _CartState extends State<Cart> {
 
     totalprice = 0;
     for (var i = 0; i < CartList.length; i++) {
-      list.add(Hero(
-          tag: CartList[i].image ?? '',
-          child: ProductsProperty(CartList[i], i, context)));
+      list.add(ProductsProperty(CartList[i], i, context));
 
       totalprice = totalprice + (CartList[i].price! * CartList[i].cartQuantity);
       setState(() {});

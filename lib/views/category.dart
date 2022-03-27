@@ -254,27 +254,19 @@ class _CategoryState extends State<Category> {
     List<Widget> list = [];
     if (widget.type == 'Headache') {
       for (var i = 0; i < 1; i++) {
-        list.add(Hero(
-            tag: products[i].image ?? '',
-            child: ProductsProperty(products[i], i, context)));
+        list.add(ProductsProperty(products[i], i, context));
       }
     } else if (widget.type == 'Supplements') {
       for (var i = 0; i < products.length; i++) {
-        list.add(Hero(
-            tag: products[i].image ?? '',
-            child: ProductsProperty(products[i], i, context)));
+        list.add(ProductsProperty(products[i], i, context));
       }
     } else if (widget.type == 'Infants') {
       for (var i = 0; i < 3; i++) {
-        list.add(Hero(
-            tag: products[i].image ?? '',
-            child: ProductsProperty(products[i], i, context)));
+        list.add(ProductsProperty(products[i], i, context));
       }
     } else {
       for (var i = 0; i < 4; i++) {
-        list.add(Hero(
-            tag: products[i].image ?? '',
-            child: ProductsProperty(products[i], i, context)));
+        list.add(ProductsProperty(products[i], i, context));
       }
     }
 

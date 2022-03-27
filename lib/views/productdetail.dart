@@ -466,9 +466,7 @@ class _DetailState extends State<Detail> {
   List<Widget> BuildProducts(context) {
     List<Widget> list = [];
     for (var i = 1; i < products.length; i++) {
-      list.add(Hero(
-          tag: products[i].image ?? '',
-          child: ProductsProperty(products[i], i, context)));
+      list.add(ProductsProperty(products[i], i, context));
       list.add(const SizedBox(width: 10));
     }
     return list;

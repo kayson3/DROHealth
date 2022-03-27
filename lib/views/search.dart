@@ -29,9 +29,7 @@ class _SearchState extends State<Search> {
     List<Widget> list = [];
     for (var i = 0; i < products.length; i++) {
       if (products[i].name!.contains(widget.txt)) {
-        list.add(Hero(
-            tag: products[i].image ?? '',
-            child: ProductsProperty(products[i], i, context)));
+        list.add(ProductsProperty(products[i], i, context));
       }
     }
     if (list.isEmpty) {
@@ -225,9 +223,7 @@ class _SearchState extends State<Search> {
     List<Widget> list = [];
     for (var i = 0; i < products.length; i++) {
       if (products[i].name!.contains(widget.txt)) {
-        list.add(Hero(
-            tag: products[i].image ?? '',
-            child: ProductsProperty(products[i], i, context)));
+        list.add(ProductsProperty(products[i], i, context));
       }
     } //.then((){});
     if (list.isEmpty) {}

@@ -340,9 +340,7 @@ class _PharmacyState extends State<Pharmacy> {
   List<Widget> BuildProducts(context) {
     List<Widget> list = [];
     for (var i = 0; i < products.length; i++) {
-      list.add(Hero(
-          tag: products[i].image ?? '',
-          child: ProductsProperty(products[i], i, context)));
+      list.add(ProductsProperty(products[i], i, context));
     }
     return list;
   }
